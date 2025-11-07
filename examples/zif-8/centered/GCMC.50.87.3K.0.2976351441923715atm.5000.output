@@ -1,0 +1,82 @@
+Reading: examples/zif-8/centered/GCMC.50.87.3K.0.2976351441923715atm.5000.data
+============================================================
+
+Structure info:
+  Total atoms: 2589
+  Atom types: 10
+  Box: 34.100 x 34.100 x 34.100 Å
+
+Atom counts:
+  Zn :    96
+  N  :   384
+  C  :   192
+  C  :   384
+  C  :   192
+  H  :   384
+  H  :   192
+  H  :   192
+  H  :   192
+  Ar :   381
+
+Binning parameters:
+  Box size: 34.100 Å
+  Number of bins: 32³ = 32768 bins
+  Bin width: 1.066 Å
+
+============================================================
+Test 1: All atoms
+============================================================
+Binned string length: 32768
+First 100 chars: 0000000000100000000000000000000000000000001000000000000000000000000000000101110100000000000000000000...
+
+CID results (all atoms):
+  CID (original):      0.0732
+  CID (shuffled):      0.0808 ± 0.0005
+  CID (normalized):    0.9068
+  Compression gain:    0.0932 (9.3%)
+
+============================================================
+Test 2: Zn sublattice only
+============================================================
+Zn atoms: 96
+
+CID results (Zn only):
+  CID (original):      0.0075
+  CID (shuffled):      0.0089 ± 0.0002
+  CID (normalized):    0.8364
+  Compression gain:    0.1636 (16.4%)
+
+============================================================
+Test 3: Framework (Zn + N + C, no H or Ar)
+============================================================
+Framework atoms: 1248
+
+CID results (framework):
+  CID (original):      0.0386
+  CID (shuffled):      0.0499 ± 0.0004
+  CID (normalized):    0.7745
+  Compression gain:    0.2255 (22.5%)
+
+============================================================
+Test 4: Argon guests only
+============================================================
+Ar atoms: 381
+
+CID results (Ar guests):
+  CID (original):      0.0209
+  CID (shuffled):      0.0223 ± 0.0001
+  CID (normalized):    0.9347
+  Compression gain:    0.0653 (6.5%)
+
+============================================================
+SUMMARY
+============================================================
+Subset               CID_norm     Interpretation
+------------------------------------------------------------
+All atoms            0.9068       Moderately ordered
+Zn sublattice        0.8364       Moderately ordered
+Framework            0.7745       Moderately ordered
+Ar guests            0.9347       Disordered
+
+============================================================
+Test complete!
