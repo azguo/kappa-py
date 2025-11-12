@@ -1,8 +1,6 @@
 # kappa-py
 Data compression for thermodynamic analysis
 
----
-
 ## Setup
 
 ```bash
@@ -14,8 +12,6 @@ cd ../..
 # 2. Install Python package
 pip install -e .
 ```
-
----
 
 ## Quick Start
 
@@ -31,8 +27,6 @@ This reads all `snapshot_*.xyz` files, containing xyz configurations in a cubic 
 (with side ranging from 0 to 75), bins the particles spatially and takes a Hilbert scan
 through the discretized data (default 32 bins per side), and computes CID values.
 This script takes in all xyz data, does not distinguish atom types. 
-
----
 
 ## Usage
 
@@ -61,8 +55,6 @@ Snapshots in `.xyz` format:
 ...
 ```
 
----
-
 ## Output
 
 CSV file with columns:
@@ -71,8 +63,6 @@ CSV file with columns:
 - `compression_gain` - Amount of spatial structure
 - `cid` - Raw compression ratio
 - `cid_shuffled` - Shuffled baseline
-
----
 
 ## Dependencies
 
