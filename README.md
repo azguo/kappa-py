@@ -59,7 +59,7 @@ Snapshots in `.xyz` format:
 
 CSV file with columns:
 
-- `cid_normalized` - Structural order metric (0.5 = crystal, 1.0 = gas), cid normed by shuffled cid
+- `cid_normalized` - Structural order metric, cid normed by shuffled cid
 - `compression_gain` - Amount of spatial structure
 - `cid` - Raw compression ratio
 - `cid_shuffled` - Shuffled baseline
